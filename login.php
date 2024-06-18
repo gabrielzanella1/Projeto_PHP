@@ -52,7 +52,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="treinos.php">Treinos</a>
+                        <a class="nav-link" href="treinos/listar_treinos.php">Treinos</a>
                     </li>
                 </ul>
             </div>

@@ -70,6 +70,13 @@
                     </li>
                 </ul>
             </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="treinos/criar_treino.php">Criar treinos</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
