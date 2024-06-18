@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $senha = $_POST['senha'];
 
     if (login($conn, $email, $senha)) {
-        header("Location: index.php");
+        header("Location: principal1.php");
     } else {
         echo "Login falhou.";
     }

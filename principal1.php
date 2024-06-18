@@ -63,27 +63,6 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="treinos/listar_treinos.php">Treinos</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="treinos/criar_treino.php">Criar treinos</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../logout.php">Logout</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 
@@ -91,13 +70,13 @@
         <div class="card">
             <img src="https://i.pinimg.com/originals/2d/8b/09/2d8b090b82b1f601941f35b2c138ac18.jpg" class="card-img" alt="Login">
             <div class="card-img-overlay">
-                <a href="login.php" class="stretched-link text-white">Login</a>
+                <a href="treinos/listar_treinos.php" class="stretched-link text-white">Listar Treinos</a>
             </div>
         </div>
         <div class="card">
             <img src="https://i.pinimg.com/originals/76/cb/8d/76cb8d189f3d08d74040e4b4f07c9395.jpg" class="card-img" alt="Register">
             <div class="card-img-overlay">
-                <a href="register.php" class="stretched-link text-white">Cadastre-se</a>
+                <a href="treinos/criar_treino.php" class="stretched-link text-white">Criar Treinos</a>
             </div>
         </div>
     </div>
