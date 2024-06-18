@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia Cleber & Cunha - Criar Treino</title>
+    <title>Academia Cleber & Cunha</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
-            background-color: #696969; 
+            background: url('https://i.pinimg.com/originals/1f/ab/8c/1fab8c6468e26ef315dd840e55ccdb17.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
         .navbar {
             background-color: #000; 
@@ -95,6 +96,7 @@
                 <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Criar Treino</button>
+            <a href='../principal1.php' class='btn btn-primary'>Voltar</a>
         </form>
     </div>
 

@@ -6,11 +6,6 @@
 </head>
 <body>
     <header class="text-black d-flex justify-content-center mt-2">
-
         <h1>Academia Cleber & Cunha</h1>
-        <?php if (isset($_SESSION['user_id'])): ?>
-            <!-- <p>Olá, <<!-- ?php echo htmlspecialchars($_SESSION['user_name']); ?>!</p> -->
-            <!-- <a href="logout.php">Logout</a> -->
-        <?php endif; ?>
     </header>   
     <hr>

@@ -59,37 +59,16 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Academia Cleber & Cunha</a>
+            <a class="navbar-brand text-white mx-auto" href="index.php">Academia Cleber & Cunha</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="treinos/listar_treinos.php">Treinos</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="treinos/criar_treino.php">Criar treinos</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../logout.php">Logout</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 
     <div class="container main-content">
         <div class="card">
-            <img src="https://i.pinimg.com/originals/2d/8b/09/2d8b090b82b1f601941f35b2c138ac18.jpg" class="card-img" alt="Login">
+            <img src="https://i.pinimg.com/originals/62/8c/ec/628cec2384f53027f9a1932c1706edaf.jpg" class="card-img" alt="Login">
             <div class="card-img-overlay">
                 <a href="login.php" class="stretched-link text-white">Login</a>
             </div>

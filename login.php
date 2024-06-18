@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
-            background: url('https://i.pinimg.com/originals/2d/8b/09/2d8b090b82b1f601941f35b2c138ac18.jpg') no-repeat center center fixed;
+            background: url('https://i.pinimg.com/originals/1f/ab/8c/1fab8c6468e26ef315dd840e55ccdb17.jpg') no-repeat center center fixed;
             background-size: cover;
         }
         .navbar {
@@ -49,13 +49,6 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="treinos/listar_treinos.php">Treinos</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 

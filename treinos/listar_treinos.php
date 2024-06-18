@@ -43,7 +43,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="../index.php">Home</a>
+            <a class="navbar-brand" href="../principal1.php">Início</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -100,6 +100,6 @@ $treinos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php endforeach; ?>
 </table>
 
-<a href='../logout.php' class='btn btn-outline-light m-3'>Sair</a>
+<a href='../principal1.php' class='btn btn-outline-light m-3'>Voltar</a>
 
 <?php include '../includes/footer.php'; ?>
