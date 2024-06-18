@@ -16,7 +16,7 @@
             align-items: center;
             color: white;
             text-align: center;
-            margin-top: 56px; /* Adjust this if your navbar height is different */
+            margin-top: 56px; 
         }
         .navbar {
             background-color: #000;
@@ -151,7 +151,7 @@
 
                 if ($result === true) {
                     // Redirecionar para a página principal após o cadastro bem-sucedido
-                    header("Location: principal1.php");
+                    header("Location: login.php");
                     exit;
                 } else {
                     echo "<div class='alert alert-danger'>$result</div>";
