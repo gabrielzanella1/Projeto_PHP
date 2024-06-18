@@ -61,27 +61,7 @@
         <h1>Academia Cleber & Cunha</h1>
         <h2>Seus treinos</h2>
         <p>Comece hoje para não se arrepender amanhã</p>
-        <div class="table-container">
-            <table>
-                <tr>
-                    <th>Nome do Treino</th>
-                    <th>Descrição</th>
-                    <th><?php echo ($user_type == 'professor') ? 'Aluno' : 'Professor'; ?></th>
-                </tr>
-                <?php foreach ($treinos as $treino): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($treino['nome']); ?></td>
-                        <td><?php echo htmlspecialchars($treino['descricao']); ?></td>
-                        <td><?php echo htmlspecialchars(($user_type == 'professor') ? $treino['aluno_nome'] : $treino['professor_nome']); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </table>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2024 Academia Cleber & Cunha</p>
-    </div>
+        
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+ojBxj3OB3pGZV8eqMZrW1l/ArxNf" crossorigin="anonymous"></script>
 </body>
@@ -127,7 +107,6 @@ $treinos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php endforeach; ?>
 </table>
 
-<a href='../logout.php' class='btn btn-primary'>Sair</a>
+<a href='../logout.php' class='btn btn-outline-light m-3'>Sair</a>
 
 <?php include '../includes/footer.php'; ?>
-
