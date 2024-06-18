@@ -7,24 +7,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="">
+          <a class="navbar-brand" href="index.php">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+    </nav>
     
 </body>
 </html>
 
+
 <?php
 session_start();
 include 'includes/header.php';
+include 'config.php';
+include 'functions/auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    include 'config.php';
-    include 'functions/auth.php';
-
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
     $tipo = $_POST['tipo'];
 
-    if (register($conn, $nome, $email, $senha, $tipo)) {
+    if ($tipo == 'aluno') {
+        // Atribuir um professor aleatório
+        $stmt = $conn->query("SELECT id FROM professores ORDER BY RAND() LIMIT 1");
+        $professor = $stmt->fetch(PDO::FETCH_ASSOC);
+        $professor_id = $professor['id'];
+    } else {
+        $professor_id = null; // Professores não têm um professor atribuído
+    }
+
+    $registration_result = register($conn, $nome, $email, $senha, $tipo, $professor_id);
+    if ($registration_result === true) {
         // Registro bem-sucedido, faça o login automaticamente
         if (login($conn, $email, $_POST['senha'])) {
             header("Location: index.php");
@@ -33,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Erro ao fazer o login após o registro.";
         }
     } else {
-        echo "Registro falhou.";
+        echo $registration_result;
     }
 }
 ?>
@@ -51,3 +70,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </form>
 
 <?php include 'includes/footer.php'; ?>
+
