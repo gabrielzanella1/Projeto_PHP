@@ -6,6 +6,9 @@
     <title>Academia Cleber & Cunha</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+        body {
+            background-color: #696969; /* Cor de fundo cinza claro */
+        }
         .navbar {
             background-color: #000;
         }
@@ -17,10 +20,11 @@
         }
         .card {
             border: none;
-            width:30%; /* Definindo largura de 60% */
+            width: 30%; /* Definindo largura de 60% */
             margin: 0 auto; /* Centralizando o cartão na tela */
             height: 480px; /* Definindo altura fixa para os cartões */
             overflow: hidden; /* Para garantir que as imagens não ultrapassem a altura definida */
+            text-decoration: none;
         }
         .card-img {
             height: auto;
@@ -46,6 +50,9 @@
             align-items: center;
             height: 70vh;
             gap: 20px;
+        }
+        .text-white {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -74,7 +81,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="https://i.pinimg.com/originals/76/cb/8d/76cb8d189f3d08d74040e4b4f07c9395.jpg " class="card-img" alt="Register">
+            <img src="https://i.pinimg.com/originals/76/cb/8d/76cb8d189f3d08d74040e4b4f07c9395.jpg" class="card-img" alt="Register">
             <div class="card-img-overlay">
                 <a href="register.php" class="stretched-link text-white">Cadastre-se</a>
             </div>
@@ -82,7 +89,7 @@
     </div>
 
     <div class="footer">
-    <p>Comece hoje para não se arrepender amanhã</p>
+        <p>Comece hoje para não se arrepender amanhã</p>
     </div>
 
     <div class="footer">
