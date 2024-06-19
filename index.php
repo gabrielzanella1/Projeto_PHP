@@ -82,7 +82,7 @@
     </div>
 
     <div class="footer">
-        <p>Comece hoje para não se arrepender amanhã</p>
+        <p>Comece hoje para não se arrepender amanhã!</p>
     </div>
 
     <div class="footer">

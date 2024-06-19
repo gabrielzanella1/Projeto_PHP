@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    include 'config.php';
+    include 'functions/auth.php';
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    if (login($conn, $email, $senha)) {
+        header("Location: principal1.php");
+        exit;
+    } else {
+        $loginError = "Login falhou. Verifique seu email ou senha.";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +80,7 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" name="email" required id="email" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Não iremos compatilhar seu e-mail com mais ninguém.</div>
+                <div id="emailHelp" class="form-text">Não iremos compartilhar seu e-mail com mais ninguém.</div>
             </div>
             <div class="mb-3">
                 <label for="senha" class="form-label">Senha</label>
@@ -72,7 +90,15 @@
                 <a href='register.php' class='btn btn-secondary'>Cadastre-se</a>
                 <button type="submit" class="btn btn-primary">Entrar</button>
             </div>
+
+            <?php
+        if (!empty($loginError)) {
+            echo "<div class='alert alert-danger mt-3'>$loginError</div>";
+        }
+        ?>
         </form>
+
+       
     </div>
 
     <div class="footer">
@@ -83,19 +109,4 @@
 </body>
 </html>
 
-<?php
-session_start();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    include 'config.php';
-    include 'functions/auth.php';
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-
-    if (login($conn, $email, $senha)) {
-        header("Location: principal1.php");
-    } else {
-        echo "Login falhou.";
-    }
-}
-?>
