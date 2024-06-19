@@ -66,10 +66,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <span class="nav-link">Bem-vindo, <?php echo htmlspecialchars($username); ?>!</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Sair</a>
+                        <span class="nav-link">Bem-vindo, <?php echo htmlspecialchars($nome); ?>!</span>
                     </li>
                 </ul>
             </div>
