@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
-            background-color: #696969; /* Cor de fundo cinza claro */
+            background-color: #696969; 
         }
         .navbar {
             background-color: #000;
@@ -20,10 +20,10 @@
         }
         .card {
             border: none;
-            width: 30%; /* Definindo largura de 60% */
-            margin: 0 auto; /* Centralizando o cartão na tela */
-            height: 480px; /* Definindo altura fixa para os cartões */
-            overflow: hidden; /* Para garantir que as imagens não ultrapassem a altura definida */
+            width: 30%; 
+            margin: 0 auto; 
+            height: 480px; 
+            overflow: hidden; 
             text-decoration: none;
         }
         .card-img {

@@ -15,7 +15,6 @@ function login($conn, $email, $senha) {
 }
 
 function register($conn, $nome, $email, $senha, $tipo, $professor_id = null) {
-    // Verificar se o email já está em uso
     $stmt = $conn->prepare("SELECT COUNT(*) FROM usuarios WHERE email = :email");
     $stmt->bindParam(':email', $email);
     $stmt->execute();
@@ -25,7 +24,6 @@ function register($conn, $nome, $email, $senha, $tipo, $professor_id = null) {
         return "Email já está em uso.";
     }
 
-    // Inserir novo usuário
     $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha, tipo) VALUES (:nome, :email, :senha, :tipo)");
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':email', $email);
