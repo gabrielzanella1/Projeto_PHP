@@ -146,16 +146,17 @@
                 $email = $_POST['email'];
                 $senha = $_POST['senha'];
                 $tipo = $_POST['tipo'];
-
+            
                 $result = register($conn, $nome, $email, $senha, $tipo);
-
-                if ($result === true) {
-                    // Redirecionar para a página principal após o cadastro bem-sucedido
-                    header("Location: login.php");
-                    exit;
-                } else {
-                    echo "<div class='alert alert-danger'>$result</div>";
-                }
+            
+            if ($result === true) {
+                echo "<div class='alert alert-success'>Cadastro realizado com sucesso! Redirecionando para a página de login...</div>";
+                // Aguarda 3 segundos antes de redirecionar
+                header("refresh:3;url=login.php");
+                exit;
+            } else {
+                echo "<div class='alert alert-danger'>$result</div>";
+            }
             }
             ?>
         </div>

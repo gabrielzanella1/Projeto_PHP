@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    // Redireciona para a página de login se não estiver logado
+    header("Location: login.php");
+    exit();
+}
+
+$user_name = $_SESSION['user_name'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -66,7 +79,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <span class="nav-link">Bem-vindo, <?php echo htmlspecialchars($nome); ?>!</span>
+                        <span class="nav-link">Bem-vindo, <?php echo htmlspecialchars($user_name); ?>!</span>
                     </li>
                 </ul>
             </div>
